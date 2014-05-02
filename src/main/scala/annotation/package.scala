@@ -7,6 +7,7 @@
 package com.github.okomok
 package sing
 
+import scala.annotation.StaticAnnotation
 
 package object annotation {
 
