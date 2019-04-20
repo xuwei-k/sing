@@ -17,7 +17,7 @@ trait AssertionMacroImpl2 extends InContext {
     final def termMacro_[x, y](implicit x: c.WeakTypeTag[x], y: c.WeakTypeTag[y]): c.Tree = {
         assertionTypeImpl(TypeTree(x.tpe), TypeTree(y.tpe)) match {
             case AssertionFailure(msg) => CompileError.assertError(c)(msg)
-            case _ => q"_root_.scala.Unit"
+            case _ => q"()"
         }
     }
 
